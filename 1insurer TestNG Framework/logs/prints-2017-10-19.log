@@ -1,0 +1,6 @@
+12:37:07.812 [main] INFO  com.insurertestng.AddIndividualClient - Client is successfully created.
+15:20:08.565 [main] INFO  com.insurertestng.AddIndividualClient - Client Not Found
+15:22:03.406 [main] INFO  com.insurertestng.AddIndividualClient - Houshold info Message Received
+15:22:14.150 [main] INFO  com.insurertestng.AddIndividualClient - Client is successfully created.
+17:05:48.218 [main] INFO  com.insurertestng.AddIndividualClient - Client Not Found
+17:06:58.065 [main] INFO  com.insurertestng.AddIndividualClient - Houshold info Message Received

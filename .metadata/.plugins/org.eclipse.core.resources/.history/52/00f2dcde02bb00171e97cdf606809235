@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Setup>
+   <Environment1>>
+      <Browser>IE</Browser>
+      <URL>http://10.2.64.3:9080/Jasper/</URL>
+      <Database>DB2</Database>
+   </Environment1>>  
+</Setup>

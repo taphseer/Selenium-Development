@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18426" started-at="2017-10-27T10:42:20Z" finished-at="2017-10-27T10:42:39Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18426" started-at="2017-10-27T10:42:20Z" finished-at="2017-10-27T10:42:39Z">
+      <class name="com.masteringselenium.BasicTest">
+        <test-method status="PASS" signature="googleCheeseExample()[pri:0, instance:com.masteringselenium.BasicTest@68be2bc2]" name="googleCheeseExample" duration-ms="9544" started-at="2017-10-27T15:42:20Z" finished-at="2017-10-27T15:42:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleCheeseExample -->
+        <test-method status="PASS" signature="googleMilkExample()[pri:0, instance:com.masteringselenium.BasicTest@68be2bc2]" name="googleMilkExample" duration-ms="8872" started-at="2017-10-27T15:42:30Z" finished-at="2017-10-27T15:42:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleMilkExample -->
+      </class> <!-- com.masteringselenium.BasicTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

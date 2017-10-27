@@ -1,0 +1,175 @@
+/**
+ * 
+ */
+package com.innovation.pages.client.pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import com.innovation.data.XMLDataReader;
+import com.innovation.data.XMLElementCounter;
+import com.innovation.misc.RandomLetters;
+import com.innovation.misc.RandomNumbers;
+import com.innovation.pages.client.objects.OR_AddIndividualClient;
+
+/**
+ * @author lushs This class will store all the locators and methods of the Add Client page.
+ */
+
+public class AddIndividualClient
+{
+
+	WebDriver driver;
+
+	public AddIndividualClient (WebDriver driver)
+	{
+		this.driver = driver;
+		PageFactory.initElements (driver, OR_AddIndividualClient.class);
+	}
+
+	public void selectTitle ()
+	{
+		OR_AddIndividualClient.ddlTitle.click ();
+		Select oTitle = new Select (OR_AddIndividualClient.ddlTitle);
+
+		// Select a random title from the returned list
+		List<WebElement> selections = oTitle.getOptions ();
+		int index = (int) (Math.random () * (selections.size () - 2)) + 2;
+		oTitle.selectByIndex (index);
+
+	}
+
+	public void typeFirstName ()
+	{
+		OR_AddIndividualClient.txtFirstName.sendKeys (RandomLetters.produceRandomString (6));
+	}
+
+	public void typeSurname ()
+	{
+		OR_AddIndividualClient.txtLastName.sendKeys (RandomLetters.produceRandomString (8));
+	}
+
+	public void typeEmail ()
+	{
+		String emailconcat = RandomLetters.produceRandomString (10) + "@1insurer.com";
+		OR_AddIndividualClient.txtEmail.sendKeys (emailconcat);
+	}
+
+	public void typeHomePhoneNo ()
+	{
+		OR_AddIndividualClient.txtHomePhone.sendKeys (RandomNumbers.produceRandomNumber (9));
+	}
+
+	public void typeZIPCode ()
+	{
+		XMLElementCounter returnXMLElementCount = new XMLElementCounter ();
+		Integer intElement = (returnXMLElementCount.ReturnXMLElementCount ("postcode", "Postcode.xml"));
+		System.out.println ("The element number is : " + intElement);
+
+		// XMLDataReader returnXMLString = new XMLDataReader ();
+		OR_AddIndividualClient.txtZipCode.clear ();
+		// OR_AddIndividualClient.txtZipCode.sendKeys (returnXMLString.ReturnXMLNode ("postcode" + intElement, "postcode",
+		// "Postcode.xml"));
+		OR_AddIndividualClient.txtZipCode.sendKeys ("SO14 0YB");
+	}
+
+	public void clickZipCodeSearchIcon ()
+	{
+		OR_AddIndividualClient.imgZipSearchIcon.click ();
+	}
+
+	public void SearchCriteriaDropDown ()
+	{
+		OR_AddIndividualClient.ddlSearchCriteria.click ();
+		Select dropdown = new Select (OR_AddIndividualClient.ddlSearchCriteria);
+
+		// Select a random PostCode from the returned list
+		List<WebElement> selections = dropdown.getOptions ();
+		int iCnt = selections.size ();
+		System.out.println ("The list size is : " + iCnt);
+		// If only one postcode is returned the list is 2 in size (including one blank field) but the Results field is automatically
+		// populated
+		// As the drop down is no longer in focus the test will fail.
+		if (iCnt > 2)
+		{
+			int index = (int) (Math.random () * (selections.size () - 2)) + 2;
+			System.out.println ("The element to be selected is : " + index);
+			dropdown.selectByIndex (index);
+		}
+		else
+		{
+			System.out.println ("Only one address line returned : " + iCnt);
+		}
+	}
+
+	public void typeDOB ()
+	{
+		XMLElementCounter returnXMLElementCount = new XMLElementCounter ();
+		Integer intElement = (returnXMLElementCount.ReturnXMLElementCount ("dateofbirth", "UKDateOfBirth.xml"));
+		// System.out.println ("The number is : " + intElement);
+		XMLDataReader returnXMLString = new XMLDataReader ();
+		OR_AddIndividualClient.txtDOB.sendKeys (returnXMLString.ReturnXMLNode ("dateofbirth" + intElement, "dateofbirth", "UKDateOfBirth.xml"));
+		// System.out.println ("The number is : " + returnXMLString.ReturnXMLNode ("dateofbirth" + intElement, "dateofbirth",
+		// "UKDateOfBirth.xml"));
+	}
+
+	public void selectGender ()
+	{
+		OR_AddIndividualClient.ddlGender.click ();
+		Select oGender = new Select (OR_AddIndividualClient.ddlGender);
+
+		// Select a random gender from the returned list
+		List<WebElement> selections = oGender.getOptions ();
+		int index = (int) (Math.random () * (selections.size () - 2)) + 2;
+		oGender.selectByIndex (index);
+	}
+
+	public void selectMaritalStatus ()
+	{
+		OR_AddIndividualClient.ddlMaritalStatus.click ();
+		Select oMarital = new Select (OR_AddIndividualClient.ddlMaritalStatus);
+
+		// Select a random marital status from the returned list
+		List<WebElement> selections = oMarital.getOptions ();
+		int index = (int) (Math.random () * (selections.size () - 2)) + 2;
+		oMarital.selectByIndex (index);
+	}
+
+	public void selectLanguage ()
+	{
+		OR_AddIndividualClient.ddlLanguage.click ();
+		Select oLanguage = new Select (OR_AddIndividualClient.ddlLanguage);
+
+		// Select a random language from the returned list
+		List<WebElement> selections = oLanguage.getOptions ();
+		int index = (int) (Math.random () * (selections.size () - 2)) + 2;
+		oLanguage.selectByIndex (index);
+	}
+
+	public void clickNext ()
+	{
+		OR_AddIndividualClient.imgNavigationNext.click ();
+	}
+
+	public void clickYes ()
+	{
+		boolean blnIsPresent = driver.findElements (By.id ("igUserInteractResponseYes")).size () > 0;
+		System.out.println (blnIsPresent);
+		if (!blnIsPresent)
+		{
+			System.out.println ("No other client at this address!");
+		}
+		else
+		{
+			OR_AddIndividualClient.btnYes.click ();
+
+		}
+
+	}
+
+}

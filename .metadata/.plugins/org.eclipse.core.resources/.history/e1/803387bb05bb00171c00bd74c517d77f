@@ -1,0 +1,205 @@
+/**
+ * 
+ */
+package com.innovation.regression;
+
+import org.apache.commons.lang3.time.StopWatch;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+
+import com.innovation.misc.SeleniumWaiter;
+import com.innovation.misc.TransactionTimer;
+import com.innovation.pages.client.pages.AddIndividualClient;
+import com.innovation.pages.common.pages.ActionsPanel;
+import com.innovation.pages.common.pages.HomeScreen;
+import com.innovation.pages.common.pages.LoginPage;
+import com.innovation.pages.common.pages.PreviousSessionWorkItems;
+import com.innovation.pages.policy.pages.PolicyClientSearch;
+import com.innovation.pages.policy.pages.PolicyCoverages;
+import com.innovation.pages.policy.pages.PolicyLosses;
+import com.innovation.pages.policy.pages.PolicyPreliminaryQuestions;
+import com.innovation.pages.policy.pages.PolicyPropertyHub;
+import com.innovation.pages.policy.pages.PolicyResidentialDetails;
+import com.innovation.pages.policy.pages.PolicyStartDetails;
+import com.innovation.pages.policy.pages.PolicySummary;
+
+/**
+ * @author lushs- Regression test script covering UK Add Client and Add Policy
+ *
+ */
+
+public class AddHomeownerQuote
+{
+
+	@Test
+	public void addHomeownerQuote ()
+	{
+		// Setup
+		Hooks setup = new Hooks ();
+		WebDriver driver = setup.OpenBrowser ();
+
+		LoginPage login = new LoginPage (driver);
+		PreviousSessionWorkItems previoussessionworkitems = new PreviousSessionWorkItems (driver);
+		HomeScreen home = new HomeScreen (driver);
+		PolicyClientSearch policyclientsearch = new PolicyClientSearch (driver);
+		AddIndividualClient addIndividualclient = new AddIndividualClient (driver);
+		ActionsPanel actionspanel = new ActionsPanel (driver);
+		PolicyStartDetails policystartdetails = new PolicyStartDetails (driver);
+		PolicyPreliminaryQuestions policypreliminaryquestions = new PolicyPreliminaryQuestions (driver);
+		PolicyPropertyHub policypropertyHub = new PolicyPropertyHub (driver);
+		PolicyResidentialDetails policyresidentialdetails = new PolicyResidentialDetails (driver);
+		PolicyLosses policylosses = new PolicyLosses (driver);
+		PolicyCoverages policycoverages = new PolicyCoverages (driver);
+		PolicySummary policysummary = new PolicySummary (driver);
+		StopWatch stopwatch = new StopWatch ();
+		SeleniumWaiter seleniumwaiter = new SeleniumWaiter (driver);
+
+		// Login Page
+		seleniumwaiter.waitForMe (10);
+		login.typeUserNamePassword ();
+
+		// Login Timing
+		TransactionTimer.start (stopwatch);
+		login.clickLoginButton ();
+		TransactionTimer.stop (stopwatch, "Login");
+
+		// Check Previous Session Work items
+		seleniumwaiter.waitForMe (10);
+		previoussessionworkitems.clickRestoreAllAndApply ();
+
+		// Enter Search
+		seleniumwaiter.waitForMe (10);
+		TransactionTimer.start (stopwatch);
+		home.clickOnSearch ();
+		TransactionTimer.stop (stopwatch, "Policy Client Search");
+
+		// Policy Client Search
+		seleniumwaiter.waitForMe (10);
+		policyclientsearch.typeClientLastName ();
+		policyclientsearch.typeClientFirstName ();
+		policyclientsearch.typeClientZipCode ("S");
+		policyclientsearch.clickSearchButton ();
+		TransactionTimer.start (stopwatch);
+		policyclientsearch.clickNewIndividualButton ();
+		TransactionTimer.stop (stopwatch, "Add Individual Client");
+
+		// Add Individual Page
+		seleniumwaiter.waitForMe (10);
+		addIndividualclient.selectTitle ();
+		addIndividualclient.typeEmail ();
+		addIndividualclient.typeHomePhoneNo ();
+		addIndividualclient.typeZIPCode ();
+		addIndividualclient.clickZipCodeSearchIcon ();
+		addIndividualclient.SearchCriteriaDropDown ();
+		addIndividualclient.typeDOB ();
+		addIndividualclient.selectGender ();
+		addIndividualclient.selectMaritalStatus ();
+		addIndividualclient.selectLanguage ();
+		TransactionTimer.start (stopwatch);
+		addIndividualclient.clickNext ();
+		addIndividualclient.clickYes ();
+		TransactionTimer.stop (stopwatch, "Client Summary");
+
+		// Actions Panel
+		seleniumwaiter.waitForMe (10);
+		TransactionTimer.start (stopwatch);
+		actionspanel.clickAddQuote ();
+		TransactionTimer.stop (stopwatch, "Policy Start Details");
+
+		// Policy Start Details
+		seleniumwaiter.waitForMe (10);
+		policystartdetails.selectRegion ("United Kingdom");
+		policystartdetails.selectLOB ("Homeowners - UK Property");
+		policystartdetails.typeAgent ("117191");
+		TransactionTimer.start (stopwatch);
+		policystartdetails.clickProceedButton ();
+		TransactionTimer.stop (stopwatch, "Preliminary Questions");
+
+		// Preliminary Questions
+		// Ever been declared bankrupt
+		seleniumwaiter.waitForMe (10);
+		policypreliminaryquestions.selectKnockOutQuestions1 ();
+		// Ever been refused insurance
+		policypreliminaryquestions.selectKnockOutQuestions2 ();
+		// Ever had specific terms imposed
+		policypreliminaryquestions.selectKnockOutQuestions3 ();
+		// Any unspent criminal convictions
+		policypreliminaryquestions.selectKnockOutQuestions4 ();
+		// Property not left unattended for the 30 days consecutively
+		policypreliminaryquestions.selectKnockOutQuestions5 ();
+		TransactionTimer.start (stopwatch);
+		policypreliminaryquestions.clickProceedButton ();
+		TransactionTimer.stop (stopwatch, "Policy Property Hub");
+
+		// Policy Property Hub
+		seleniumwaiter.waitForMe (10);
+		policypropertyHub.selectRiskType ("Homeowners");
+		policypropertyHub.selectUseExistingAddress ();
+		TransactionTimer.start (stopwatch);
+		policypropertyHub.clickAddButton ();
+		TransactionTimer.stop (stopwatch, "Policy residential Details");
+
+		// Policy Residential Details
+		seleniumwaiter.waitForMe (10);
+		policyresidentialdetails.selectStructureType ();
+		policyresidentialdetails.selectYearBuilt ();
+		policyresidentialdetails.selectNoOfBeds ();
+		policyresidentialdetails.selectNoOfunits ("One unit in fire division");
+		policyresidentialdetails.selectOwnership ();
+		policyresidentialdetails.selectHoldType ();
+		TransactionTimer.start (stopwatch);
+		policyresidentialdetails.clickProceedNext ();
+		TransactionTimer.stop (stopwatch, "Policy Property Hub");
+
+		// Policy Property Hub
+		seleniumwaiter.waitForMe (10);
+		TransactionTimer.start (stopwatch);
+		policypropertyHub.clickProceedNext ();
+		TransactionTimer.stop (stopwatch, "Policy Losses");
+
+		// Policy Losses
+		seleniumwaiter.waitForMe (10);
+		TransactionTimer.start (stopwatch);
+		policylosses.clickProceedNext ();
+		TransactionTimer.stop (stopwatch, "Policy Coverages");
+
+		// Policy Coverages
+		seleniumwaiter.waitForMe (10);
+		policycoverages.selectBuildingsCoverage ();
+		policycoverages.typeBuildingsCoverageLimit ();
+		policycoverages.selectBuildingsExcess ();
+		policycoverages.selectContentsCoverage ();
+		policycoverages.typeContentsCoverageLimit ();
+		policycoverages.selectContentsExcess ();
+		policycoverages.clickCalculateButton ();
+		policycoverages.checkPremium ();
+		TransactionTimer.start (stopwatch);
+		policycoverages.clickProceedNext ();
+		TransactionTimer.stop (stopwatch, "Policy Summary");
+
+		// Policy Summary
+		seleniumwaiter.waitForMe (20);
+		policysummary.selectBillPlan ();
+		policysummary.clickSelectButton ();
+		policysummary.checkQutoeNo ();
+		TransactionTimer.start (stopwatch);
+		seleniumwaiter.waitForMe (20);
+		actionspanel.clickCompleteQuote ();
+		TransactionTimer.stop (stopwatch, "Complete Quote");
+
+		// Home Screen
+		seleniumwaiter.waitForMe (20);
+		TransactionTimer.start (stopwatch);
+		home.clickOnDesktop ();
+		TransactionTimer.stop (stopwatch, "Loading Desktop");
+
+		seleniumwaiter.waitForMe (10);
+		TransactionTimer.start (stopwatch);
+		home.clickSignOut ();
+		TransactionTimer.stop (stopwatch, "Sign Out");
+		seleniumwaiter.waitForMe (10);
+		driver.quit ();
+
+	}
+
+}

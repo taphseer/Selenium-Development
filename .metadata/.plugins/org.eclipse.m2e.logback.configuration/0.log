@@ -1,0 +1,47 @@
+2017-10-27 14:25:04,035 [Worker-5] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-27 14:25:44,366 [Worker-5] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-27 14:27:09,258 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.masteringselenium.testng:mastering-selenium-testng:0.0.1-SNAPSHOT @ D:\1Lab\Selenium Development\Mastering Selenium TestNG\pom.xml.
+2017-10-27 14:27:09,957 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 14:27:09,957 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\Mastering Selenium TestNG\src\main\resources
+2017-10-27 14:27:09,959 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 14:27:09,959 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\Mastering Selenium TestNG\src\test\resources
+2017-10-27 14:27:10,026 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: m2Framework:PolicySanity:1 @ D:\1Lab\Selenium Development\PolicySanity\pom.xml.
+2017-10-27 14:27:11,001 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 14:27:11,001 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\PolicySanity\src\main\resources
+2017-10-27 14:27:11,002 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 14:27:11,002 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\PolicySanity\src\test\resources
+2017-10-27 14:27:11,813 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: m2Framework:PolicySanity:1 @ D:\1Lab\Selenium Development\PolicySanity\pom.xml.
+2017-10-27 14:27:13,631 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 14:27:13,631 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\PolicySanity\src\main\resources
+2017-10-27 14:27:13,633 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 14:27:13,633 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\PolicySanity\src\test\resources
+2017-10-27 14:35:39,727 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-27 14:42:25,905 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-27 14:53:15,664 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-27 14:53:22,563 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 14:53:22,563 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\Mastering Selenium TestNG\src\main\resources
+2017-10-27 14:53:22,565 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 14:53:22,565 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\Mastering Selenium TestNG\src\test\resources
+2017-10-27 14:53:23,841 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 14:53:23,842 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\PolicySanity\src\main\resources
+2017-10-27 14:53:23,845 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 14:53:23,845 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\PolicySanity\src\test\resources
+2017-10-27 14:53:47,776 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-27 15:02:25,829 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-27 15:07:54,014 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 15:07:54,015 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\Mastering Selenium TestNG\src\main\resources
+2017-10-27 15:07:54,017 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 15:07:54,017 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\Mastering Selenium TestNG\src\test\resources
+2017-10-27 15:07:55,162 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 15:07:55,162 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\PolicySanity\src\main\resources
+2017-10-27 15:07:55,164 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 15:07:55,164 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\PolicySanity\src\test\resources
+2017-10-27 15:09:38,874 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 15:09:38,874 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\Mastering Selenium TestNG\src\main\resources
+2017-10-27 15:09:38,879 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 15:09:38,879 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\Mastering Selenium TestNG\src\test\resources
+2017-10-27 15:09:38,894 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 15:09:38,894 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\PolicySanity\src\main\resources
+2017-10-27 15:09:38,894 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-27 15:09:38,894 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\1Lab\Selenium Development\PolicySanity\src\test\resources
+2017-10-27 15:55:09,408 [Worker-9] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

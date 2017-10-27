@@ -1,0 +1,12 @@
+For hub
+java -jar selenium-server-standalone-3.6.0.jar -role hub
+
+For node
+java -jar selenium-server-standalone-3.6.0.jar -role webdriver [ip address:port/grid/register] -port 5555
+
+java -Dwebdriver.gecko.driver="C:\geckodriver.exe" -jar selenium-server-standalone-3.6.0.jar -role webdriver -hub http://192.168.50.90:4444/grid/register -port 5555
+
+Firefox
+DesiredCapabilities capabilities =DesiredCapabilities.firefox();
+capabilities.setCapability(FirefoxDriver.BINARY, new File("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe").getAbsolutePath());
+driver = new RemoteWebDriver(new URL(idataKey.getProperty("VMNode_Tafseer")), capabilities);

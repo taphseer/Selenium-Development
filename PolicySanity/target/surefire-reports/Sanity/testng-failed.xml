@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Sanity]">
+  <test name="Policy(failed)">
+    <classes>
+      <class name="m2Framework.SignOut">
+        <methods>
+          <include name="iSignOut"/>
+        </methods>
+      </class> <!-- m2Framework.SignOut -->
+      <class name="m2Framework.AddIndividualClient">
+        <methods>
+          <include name="iSignIn"/>
+          <include name="ChangeBrand"/>
+          <include name="iSearchClient"/>
+          <include name="iAddindividualClient"/>
+        </methods>
+      </class> <!-- m2Framework.AddIndividualClient -->
+    </classes>
+  </test> <!-- Policy(failed) -->
+</suite> <!-- Failed suite [Sanity] -->
